@@ -9,10 +9,10 @@ export class TextStylingComponent {
   textColor: string = 'black';
   fontSize: number = 16;
   fontFamily: string = 'Arial'; 
-  displayingText: string = 'This is a test';
+  displayingText: string = 'This is a test !';
 
   updateTextStyles() {
-    this.displayingText = 'This is a test'; 
+    this.displayingText = 'This is a test !'; 
   }
 
   changeStyles() {
