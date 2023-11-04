@@ -1,0 +1,26 @@
+<form>
+    <div class="form-group">
+      <label for="textColorInput">Text Color:</label>
+      <input type="text" id="textColorInput" class="form-control" name="textColor" [(ngModel)]="textColor" (input)="updateTextStyles()">
+    </div>
+  
+    <div class="form-group">
+      <label for="fontSizeInput">Font Size:</label>
+      <input type="number" id="fontSizeInput" class="form-control" name="fontSize" [(ngModel)]="fontSize" (input)="updateTextStyles()">
+    </div>
+  
+    <div class="form-group">
+      <label for="fontFamilySelect">Font Family:</label>
+      <select id="fontFamilySelect" class="form-control" name="fontFamily" [(ngModel)]="fontFamily" (change)="updateTextStyles()">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Tahoma">Tahoma</option>
+      </select>
+    </div>
+
+    <p [ngStyle]="{'color': textColor, 'font-size.px': fontSize, 'font-family': fontFamily}">{{ displayingText }}</p>
+  
+    <button type="button" class="btn btn-primary" (click)="changeStyles()">Change Styles</button>
+  </form>
+  
